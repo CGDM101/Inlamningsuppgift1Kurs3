@@ -98,10 +98,9 @@ namespace MinaTester
 
             Assert.AreEqual(result, 39);
         }
-        #endregion TriangleTests
+        #endregion
 
         #region CircleTests
-
         [TestMethod]
         public void TestCircleArea()
         {
@@ -111,7 +110,7 @@ namespace MinaTester
             circle.Diameter = (circle.Radius * 2);
             circle.Pi = (float)Math.PI;
 
-            var result = 0;
+            var result = calc.GetArea(circle);
         }
 
         [TestMethod]
@@ -123,7 +122,7 @@ namespace MinaTester
             circle.Diameter = (circle.Radius * 2);
             circle.Pi = (float)Math.PI;
 
-            var result = 0;
+            var result = calc.GetPerimeter(circle);
         }
 
         [TestMethod]

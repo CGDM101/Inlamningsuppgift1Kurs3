@@ -1,22 +1,23 @@
-﻿using System;
+﻿using Kurs3Inlamningsuppgift3TDD;
+using System;
 
 namespace Kurs3Inlamningsuppgift3TDD
 {
-    public class GeometricCalculator // Denna är inte abstrakt för den ska instantieras i unit test?
+    public class GeometricCalculator // Denna är inte abstrakt för den ska instantieras i unit test.
     {
-        public float GetArea(GeometricThing figure) 
+        public float GetArea(GeometricThing figure)
         {
-            return figure.Area;
+            return 0;
         }
 
-        public float GetPerimeter(GeometricThing figure) 
+        public float GetPerimeter(GeometricThing figure)
         {
-            return figure.Perimeter;
+            return 0;
         }
 
         public float GetPerimeter(GeometricThing[] figure)
         {
-            return 0; 
+            return 0;
         }
     }
 
@@ -25,22 +26,23 @@ namespace Kurs3Inlamningsuppgift3TDD
         public float Area { get; set; }
         public float Perimeter { get; set; }
     }
-
+     
     public class Circle : GeometricThing
     {
         public float Pi { get; set; } = (float)Math.PI;
-        public float Radius { get; set; } = 2;
-        public float Diameter { get; set; } = 4; // Dubbelt så stort som radien.
-        public float GetCircleArea() // TODO:
+        public float Radius { get; set; }
+        public float Diameter { get; set; }
+        public float GetCircleArea()
         {
-
+            return Pi * (Radius * Radius);
         }
-        public float GetCirclePerimeter() // TODO:
+        public float GetCirclePerimeter()
         {
-
+            return Pi * (Radius * 2);
         }
     }
 
+    #region Fyrkanter (rektangler och kvadrater)
     public class Rectangle : GeometricThing
     {
         public float Basen { get; set; }
@@ -57,9 +59,11 @@ namespace Kurs3Inlamningsuppgift3TDD
 
     public class Kvadrat : GeometricThing
     {
+        // Samman beräkning som rektangel, så ingen extra beräkning behövs här.
         public float Basen { get; set; }
         public float Height { get; set; }
     }
+    #endregion
 
     #region Trianglar
     public class Triangle : GeometricThing
@@ -82,17 +86,17 @@ namespace Kurs3Inlamningsuppgift3TDD
 
     internal class RatvinkligTriangel : Triangle
     {
-
+        // samma som vanlig triangel, så ingen extra beräkning behövs här.
     }
 
     internal class LikbentTriangel : Triangle
     {
-
+        // samma som vanlig triangel, så ingen extra beräkning behövs här.
     }
 
     internal class LiksidigTriangel : Triangle
     {
- 
+        // samma som vanlig triangel, så ingen extra beräkning behövs här.
     }
     #endregion
     internal class Program
