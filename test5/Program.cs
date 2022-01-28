@@ -7,7 +7,7 @@ namespace Kurs3Inlamningsuppgift3TDD
     {
         public float GetArea(GeometricThing figure)
         {
-            return 0;
+            return figure.Area;
         }
 
         public float GetPerimeter(GeometricThing figure)
@@ -23,10 +23,17 @@ namespace Kurs3Inlamningsuppgift3TDD
 
     public abstract class GeometricThing : GeometricCalculator
     {
-        public float Area { get; set; }
+        private float area;
+
+        public float Area 
+        {
+            get { return area; }
+            set { area = value;}
+        }
+
         public float Perimeter { get; set; }
     }
-     
+
     public class Circle : GeometricThing
     {
         public float Pi { get; set; } = (float)Math.PI;
@@ -42,7 +49,7 @@ namespace Kurs3Inlamningsuppgift3TDD
         }
     }
 
-    #region Fyrkanter (rektangler och kvadrater)
+    #region Fyrkanter (rektanglar och kvadrater)
     public class Rectangle : GeometricThing
     {
         public float Basen { get; set; }

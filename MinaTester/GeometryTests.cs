@@ -101,7 +101,7 @@ namespace MinaTester
         #endregion
 
         #region CircleTests
-        [TestMethod]
+        [TestMethod] // TODO: CIRKELTESTERNA
         public void TestCircleArea()
         {
             GeometricCalculator calc = new GeometricCalculator();
@@ -111,6 +111,8 @@ namespace MinaTester
             circle.Pi = (float)Math.PI;
 
             var result = calc.GetArea(circle);
+
+            // ASSERT
         }
 
         [TestMethod]
@@ -123,6 +125,8 @@ namespace MinaTester
             circle.Pi = (float)Math.PI;
 
             var result = calc.GetPerimeter(circle);
+
+            // ASSERT
         }
 
         [TestMethod]
@@ -139,6 +143,8 @@ namespace MinaTester
             circle2.Pi = (float)Math.PI;
 
             var result = calc.GetPerimeter(circle, circle2);
+
+            // ASSERT
         }
         #endregion
     }
