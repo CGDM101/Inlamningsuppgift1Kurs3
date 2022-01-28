@@ -7,7 +7,44 @@ namespace Geometry2
         public abstract float Height { set; }
         public abstract float Area();
         public abstract float Perimeter();
+        // array-grejen?
     } 
+
+    public class Calculator // ?
+    {
+        public float GetCircleArea(GeometricThing figure)
+        {
+            Circle c = new Circle(10);
+            return (float)Math.PI * ((10 / 2) * 2);
+        }
+        public float GetRectangleArea(GeometricThing figure)
+        {
+            Rectangle r = new Rectangle(50);
+            r.Width = 20;
+            return 50 * 20;
+        }
+
+        public float GetSquareArea(GeometricThing figure)
+        {
+            Square s = new Square(10);
+            return 10 * 10;
+        }
+        public float GetCirclePerimeter(GeometricThing figure)
+        {
+            Circle c = new Circle(10);
+            return (float)Math.PI * ((10 / 2) * (10 / 2)); // pi * (r * r)
+        }
+        public float GetRectanglePerimeter(GeometricThing figure) 
+        {
+            Circle c = new Circle(10);
+            return (float)Math.PI * ((10 / 2) * 2); // pi * (r * 2)
+        }
+        public float GetSquarePerimeter(GeometricThing figure)
+        {
+            Square s = new Square(10);
+            return 10 * 4;
+        }
+    }
 
     public class Rectangle : GeometricThing
     {

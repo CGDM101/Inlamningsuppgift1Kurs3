@@ -9,6 +9,20 @@ namespace Geometry2.Tests
     [TestClass()]
     public class SquareTests
     {
+        #region Med Calculator.cs
+        [TestMethod()]
+        public void TestSquareAreaWithCalculator()
+        {
+            Calculator calc = new Calculator();
+            Square mySquare = new Square(10);
+            
+            var sut = calc.GetSquareArea(mySquare);
+
+            Assert.AreEqual(sut, 100);
+        }
+        #endregion 
+
+        #region Utan Calculator.cs
         [TestMethod()]
         public void SquareTestArea()
         {
@@ -71,5 +85,6 @@ namespace Geometry2.Tests
 
             Assert.AreEqual(sut, 78.5);
         }
+        #endregion
     }
 }
